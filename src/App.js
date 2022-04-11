@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react";
+import {Link, Route} from "react-router-dom";
 import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MainSlider from "./components/MainSlider";
-import MidSlider from "./components/MidSlider";
-import BottomSlider from "./components/BottomSlider";
 import Drawer from "./components/Drawer";
+import Home from "./pages/Home";
+import Popular from "./pages/Popular";
+import New from "./pages/New";
+import Rated from "./pages/Rated";
 
 function App() {
   const [newMovies, setNewMovies] = useState([]);
@@ -44,10 +46,21 @@ function App() {
     <div className="wrapper">
       <div className="header">
         <div className="menu">
-          <a href="#"><img src="img/logo-icon.png" alt="logo icon"/></a>
-          <a href="#"><img src="img/most-popular-icon.png" alt="most popular icon"/></a>
-          <a href="#"><img src="img/just-released-icon.png" alt="just released icon"/></a>
-          <a href="#"><img src="img/top-rated-icon.png" alt="top rated icon"/></a>
+          <Link to="/">
+            <img src="img/logo-icon.png" alt="logo icon"/>
+          </Link>
+
+          <Link to="/popular">
+            <img src="img/most-popular-icon.png" alt="most popular icon"/>
+          </Link>
+
+          <Link to="/new">
+            <img src="img/just-released-icon.png" alt="just released icon"/>
+          </Link>
+
+          <Link to="/rated">
+            <img src="img/top-rated-icon.png" alt="top rated icon"/>
+          </Link>
         </div>
 
         <div className="profile">
@@ -56,20 +69,36 @@ function App() {
         </div>
       </div>
 
-      <MainSlider newMovies={newMovies}/>
+      <Route path="/" exact>
+        <Home
+          newMovies={newMovies}
+          popularMovies={popularMovies}
+          onClickInfo={onClickInfo}
+          ratedMovies={ratedMovies}
+          height={height}
+        />
+      </Route>
 
-      <p className="main-header container">Most popular movies &#8250;</p>
-      <MidSlider
-        popularMovies={popularMovies}
-        onClickInfo={onClickInfo}
-      />
+      <Route path="/popular" exact>
+        <Popular
+          popularMovies={popularMovies}
+          onClickInfo={onClickInfo}
+        />
+      </Route>
 
-      <p className="main-header container">Highest rated movies &#8250;</p>
-      <BottomSlider
-        ratedMovies={ratedMovies}
-        onClickInfo={onClickInfo}
-        height={height}
-      />
+      <Route path="/new" exact>
+        <New
+          newMovies={newMovies}
+          onClickInfo={onClickInfo}
+        />
+      </Route>
+
+      <Route path="/rated" exact>
+        <Rated
+          ratedMovies={ratedMovies}
+          onClickInfo={onClickInfo}
+        />
+      </Route>
 
       <Drawer
         info={info}

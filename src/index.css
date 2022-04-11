@@ -71,6 +71,11 @@ a {
 .slide-text {
   font-size: 16px;
   line-height: 32px;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .rate {
@@ -102,7 +107,6 @@ button {
 .main-header {
   margin-top: 30px;
   margin-bottom: 30px;
-  cursor: pointer;
 }
 
 .small-slider__elem {
@@ -199,6 +203,31 @@ button {
   position: absolute;
   bottom: 10px;
 }
+
+.rated-header {
+  margin-bottom: 30px;
+}
+
+.rated-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rated-body__elem {
+  width: calc((100% - 15px) / 5);
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
