@@ -181,6 +181,11 @@ button {
   margin-right: 15px;
 }
 
+.drawer-info {
+  width: 280px;
+  padding: 5px;
+}
+
 .drawer-header {
   margin-bottom: 10px;
   display: -webkit-box;
@@ -217,18 +222,3 @@ button {
   width: calc((100% - 15px) / 5);
   margin-bottom: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

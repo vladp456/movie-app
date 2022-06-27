@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Drawer({info, opened, onClose}) {
+function Drawer({ info, opened, onClose }) {
   return (
     <div className={`${"drawer"} ${opened ? "drawerVisible" : "drawer"}`}>
       <img
@@ -16,7 +16,7 @@ function Drawer({info, opened, onClose}) {
         alt="movie image"
       />
 
-      <div>
+      <div className='drawer-info'>
         <p className="drawer-header">{info.title} ({info.date})</p>
         <p className="drawer-text">{info.text}</p>
         <button className="drawer-btn">Watch now</button>

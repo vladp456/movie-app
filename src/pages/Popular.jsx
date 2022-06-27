@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "../components/Card";
 
-function Popular({popularMovies, onClickInfo}) {
+function Popular({ popularMovies, onClickInfo }) {
   return (
     <div className="container">
       <p className="rated-header">Popular movies</p>

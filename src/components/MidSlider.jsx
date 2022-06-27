@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import Card from "./Card";
 
-function MidSlider({popularMovies, onClickInfo}) {
+function MidSlider({ popularMovies, onClickInfo }) {
   let settings = {
     speed: 500,
     arrows: true,

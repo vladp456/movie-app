@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "../components/Card";
 
-function New({newMovies, onClickInfo}) {
+function New({ newMovies, onClickInfo }) {
   return (
     <div className="container">
       <p className="rated-header">New movies</p>

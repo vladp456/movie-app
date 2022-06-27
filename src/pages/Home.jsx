@@ -2,12 +2,12 @@ import React from 'react';
 import MainSlider from "../components/MainSlider";
 import MidSlider from "../components/MidSlider";
 import BottomSlider from "../components/BottomSlider";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Home({newMovies, popularMovies, onClickInfo, ratedMovies, height}) {
+function Home({ newMovies, popularMovies, onClickInfo, ratedMovies, height }) {
   return (
     <>
-      <MainSlider newMovies={newMovies}/>
+      <MainSlider newMovies={newMovies} />
 
       <Link to="/popular">
         <p className="main-header container">Most popular movies &#8250;</p>

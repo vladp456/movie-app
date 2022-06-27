@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
 
-function MainSlider({newMovies}) {
+function MainSlider({ newMovies }) {
   let settings = {
     autoplay: true,
     speed: 3000,
@@ -19,8 +19,8 @@ function MainSlider({newMovies}) {
         {newMovies ? newMovies.map(obj => (
           <div className="slide" key={obj.id}>
             <img src={'https://image.tmdb.org/t/p/w1280' + obj.backdrop_path + '?api_key=ecb7750b8506fa9db126c8d29b0ecf22'}
-                 alt="slider image"
-                 className="slider-img"
+              alt="slider image"
+              className="slider-img"
             />
 
             <div className="slide-info">
@@ -28,7 +28,7 @@ function MainSlider({newMovies}) {
               <p className="slide-text">{obj.overview}</p>
 
               <div className="rate">
-                <img src="img/star.png" alt="star"/>
+                <img src="img/star.png" alt="star" />
                 <p>{obj.vote_average}</p>
               </div>
 

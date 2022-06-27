@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, Route} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, Route } from "react-router-dom";
 import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -47,25 +47,25 @@ function App() {
       <div className="header">
         <div className="menu">
           <Link to="/">
-            <img src="img/logo-icon.png" alt="logo icon"/>
+            <img src="img/logo-icon.png" alt="logo" />
           </Link>
 
           <Link to="/popular">
-            <img src="img/most-popular-icon.png" alt="most popular icon"/>
+            <img src="img/most-popular-icon.png" alt="most popular" />
           </Link>
 
           <Link to="/new">
-            <img src="img/just-released-icon.png" alt="just released icon"/>
+            <img src="img/just-released-icon.png" alt="just released" />
           </Link>
 
           <Link to="/rated">
-            <img src="img/top-rated-icon.png" alt="top rated icon"/>
+            <img src="img/top-rated-icon.png" alt="top rated" />
           </Link>
         </div>
 
         <div className="profile">
-          <a href=""><img src="img/account-icon.png" className="profile-item" alt="account icon"/></a>
-          <a href=""><img src="img/settings-icon.png" alt="settings icon"/></a>
+          <a href=""><img src="img/account-icon.png" className="profile-item" alt="account" /></a>
+          <a href=""><img src="img/settings-icon.png" alt="settings" /></a>
         </div>
       </div>
 

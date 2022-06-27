@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "../components/Card";
 
-function Rated({ratedMovies, onClickInfo}) {
+function Rated({ ratedMovies, onClickInfo }) {
   return (
     <div className="container">
       <p className="rated-header">High Rated Movies</p>
