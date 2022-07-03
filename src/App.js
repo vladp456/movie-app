@@ -20,13 +20,13 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const newMoviesRes = await axios.get('https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=ecb7750b8506fa9db126c8d29b0ecf22');
+        const newMoviesRes = await axios.get('https://api.themoviedb.org/3/discover/movie?primary_release_year=2020&sort_by=vote_average.desc&api_key=ecb7750b8506fa9db126c8d29b0ecf22');
         setNewMovies(newMoviesRes.data.results);
 
         const popularMoviesRes = await axios.get('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=ecb7750b8506fa9db126c8d29b0ecf22');
         setPopularMovies(popularMoviesRes.data.results);
 
-        const ratedMoviesRes = await axios.get('https://api.themoviedb.org/3/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=ecb7750b8506fa9db126c8d29b0ecf22');
+        const ratedMoviesRes = await axios.get('https://api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=ecb7750b8506fa9db126c8d29b0ecf22');
         setRatedMovies(ratedMoviesRes.data.results);
       }
       catch (e) {
@@ -64,8 +64,8 @@ function App() {
         </div>
 
         <div className="profile">
-          <a href=""><img src="img/account-icon.png" className="profile-item" alt="account" /></a>
-          <a href=""><img src="img/settings-icon.png" alt="settings" /></a>
+          <a href="#"><img src="img/account-icon.png" className="profile-item" alt="account" /></a>
+          <a href="#"><img src="img/settings-icon.png" alt="settings" /></a>
         </div>
       </div>
 

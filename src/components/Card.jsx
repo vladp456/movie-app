@@ -13,7 +13,7 @@ function Card({ id, img, rate, title, date, text, onHandleClick, height, classNa
       <img
         src={'https://image.tmdb.org/t/p/w1280' + img + '?api_key=ecb7750b8506fa9db126c8d29b0ecf22'}
         onError={(e) => e.target.src = notFound}
-        alt="slider image"
+        alt="slider"
         className="slider-elem__img"
         onClick={handleClick}
       />

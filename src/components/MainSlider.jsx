@@ -19,7 +19,7 @@ function MainSlider({ newMovies }) {
         {newMovies ? newMovies.map(obj => (
           <div className="slide" key={obj.id}>
             <img src={'https://image.tmdb.org/t/p/w1280' + obj.backdrop_path + '?api_key=ecb7750b8506fa9db126c8d29b0ecf22'}
-              alt="slider image"
+              alt="slider"
               className="slider-img"
             />
 

@@ -13,7 +13,7 @@ function Drawer({ info, opened, onClose }) {
       <img
         className="drawer-img"
         src={'https://image.tmdb.org/t/p/w1280' + info.img + '?api_key=ecb7750b8506fa9db126c8d29b0ecf22'}
-        alt="movie image"
+        alt="movie"
       />
 
       <div className='drawer-info'>
